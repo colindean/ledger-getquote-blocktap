@@ -21,6 +21,7 @@ branches:
   # Ruby regex to match tags. Required, or travis won't trigger deploys when
   # a new tag is pushed.
   - "/^\\d+\\.\\d+\\.\\d+.*$/"
+before_deploy: ci/prepare_release.sh
 deploy:
   provider: releases
   api_key:
