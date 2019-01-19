@@ -3,6 +3,7 @@ query single($symbol: String!) {
     currencyName
     currencySymbol
     markets(aggregation:VWA, filter: { quoteSymbol_eq: "USD"}) {
+      __typename
       ticker {
         lastPrice
       }
