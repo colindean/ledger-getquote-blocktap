@@ -8,4 +8,7 @@ edition = "2018"
 serde = "*"
 serde_derive = "*"
 graphql_client = "0.6.0"
+reqwest = "*"
+failure = "*"
+argparse = "*"
 
