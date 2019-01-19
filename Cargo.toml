@@ -12,6 +12,9 @@ repository = "https://github.com/colindean/ledger-getquote-blocktap"
 build = "build.rs"
 edition = "2018"
 
+[badges]
+travis-ci = { repository = "colindean/ledger-getquote-blocktap" }
+
 [dependencies]
 serde = "*"
 serde_derive = "*"
@@ -25,5 +28,6 @@ bench = false
 path = "src/main.rs"
 name = "getquote-blocktap"
 
-[badges]
-travis-ci = { repository = "colindean/ledger-getquote-blocktap" }
+[profile.release]
+opt-level = 'z'
+lto = true
