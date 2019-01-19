@@ -21,7 +21,7 @@ query ledger_pricedb {
 ```
 ## Retrieve Blocktap's JSON schema
 
-Use the fantastic graphql-rs project's command line tool:
+Use the fantastic [graphql-rust project's client tool](https://github.com/graphql-rust/graphql-client):
 
     cargo install graphql_client_cli
     
