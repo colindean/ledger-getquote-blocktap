@@ -3,4 +3,4 @@
     schema_path = "schema/blocktap.json",
     query_path = "schema/single.graphql"
 )]
-pub struct Colin;
+pub struct SingleCurrency;
