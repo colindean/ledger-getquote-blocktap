@@ -1,7 +1,6 @@
 extern crate serde;
 #[macro_use]
 extern crate serde_derive;
-#[macro_use]
 extern crate graphql_client;
 
 extern crate failure;
@@ -10,7 +9,7 @@ extern crate reqwest;
 use graphql_client::{GraphQLQuery, Response};
 
 extern crate argparse;
-use argparse::{ArgumentParser, Store, StoreTrue};
+use argparse::{ArgumentParser, Store};
 
 #[derive(GraphQLQuery)]
 #[graphql(
