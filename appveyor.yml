@@ -69,7 +69,7 @@ deploy:
   # All the zipped artifacts will be deployed
   artifact: /.*\.zip/
   auth_token:
-    secure: RwoR/+xUzFCcBW6AE9UOZbw5BUP3yE8EcuLsQ21IItalBtGpJNd3wDcIOZMs3zBK
+    secure: "RwoR/+xUzFCcBW6AE9UOZbw5BUP3yE8EcuLsQ21IItalBtGpJNd3wDcIOZMs3zBK"
   provider: GitHub
   # deploy when a new tag is pushed and only on the stable channel
   on:
