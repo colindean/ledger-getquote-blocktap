@@ -19,3 +19,12 @@ query ledger_pricedb {
   }
 }
 ```
+## Retrieve Blocktap's JSON schema
+
+Use the fantastic graphql-rs project's command line tool:
+
+    cargo install graphql_client_cli
+    
+Get the latest version of the JSON schema:
+
+    graphql-client introspect-schema https://api.blocktap.io/graphql --output /tmp/blocktap.json
