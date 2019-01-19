@@ -1,8 +1,9 @@
 language: rust
 env:
   global:
-    - PROJECT_NAME: ledger-getquote-blocktap
-    - RUST_BACKTRACE: full
+  - PROJECT_NAME: ledger-getquote-blocktap
+  - BINARY_NAME: getquote-blocktap
+  - RUST_BACKTRACE: full
 matrix:
   fast_finish: true
   include:
@@ -13,3 +14,22 @@ matrix:
     rust: nightly
     env: TARGET=x86_64-apple-darwin
 cache: cargo
+branches:
+  only:
+  # Pushes and PR to the master branch
+  - master
+  # Ruby regex to match tags. Required, or travis won't trigger deploys when
+  # a new tag is pushed.
+  - "/^\\d+\\.\\d+\\.\\d+.*$/"
+deploy:
+  provider: releases
+  api_key:
+    secure: Ck76XD2wJCj8YLLcqT5VnAd3U1fJ2pxFJfgDHu8rjm/MNBxi9njbg7+tiu08egxbKZ0Lhh9yo+1UDtnGO4Yam8LH1NyXh7OOMPdq46JcjTf7Jwv46H4yCEdvUDRdU6JTMXuHKNJl96I8jgum6LzZfX/j+RjzlKg+1EmjRq6lcIFxEUvS6OtedikXnQHDf6EZ0FguNCDQyJVX+gT+9o8aepF9OfgkGMV90nqJiWkVkR1jKYDEWqh3jMIpCor/1hQq1uzIsBKwfM50A4JE7ylpeUROz7x9owh78hN+q0kw5Vd7ek6o4RNv5P65Pqqxcax7aO1DWvZbVwxaxWOp5a3RdMcKzYEBHeW+8eOrrnTMJIVxHQy4xAbDchHixMqtTuTjkDa2t75bCcvhdsuMvn36cVxpWbrJCuLGM1FJaLm6y1sXK/KxUUWZXARtcyAemjqfWdybyPbUuusoPy4g+7lVoEKA3iw7kUTizcKXylo+lzfAH94dKpnS4I3v8HkRDq9nDO03XAnOpkjD27z1R19FzxacCIRzI9m9k6rE2HhjTYaTtNYJUvMHoQU9x+PttwstvKbOzIoOdm4kCEYBELQrx0PZ42GLecBUR9gPVKJEPwUpry0zaG//fl3XdXP+2HhmGKq1ll0Z8duaNIbLExYjbrhibmHNfsuyAeKI/QAI9pA=
+  file: deployment/${PROJECT_NAME}-${TRAVIS_TAG}-${TARGET}.tar.gz
+  file_glob: true
+  skip_cleanup: true
+  on:
+    repo: colindean/ledger-getquote-blocktap
+    condition: $TRAVIS_RUST_VERSION = nightly
+    branch: master  # i guess we do need this after all?
+    tags: true

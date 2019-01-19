@@ -1,7 +1,15 @@
 [package]
 name = "ledger-getquote-blocktap"
 version = "0.1.0"
+description = "ledger-getquote-blocktap uses Blocktap.io to retrieve cryptocurrency spot pricing."
+readme = "README.md"
+keywords = ["cryptocurrency", "plaintextaccounting", "ledger", "blocktap", "graphql"]
+categories = ["command-line-utilities"]
+license = "MIT"
 authors = ["Colin Dean <git@cad.cx>"]
+homepage = "https://github.com/colindean/ledger-getquote-blocktap"
+repository = "https://github.com/colindean/ledger-getquote-blocktap"
+build = "build.rs"
 edition = "2018"
 
 [dependencies]
@@ -12,3 +20,10 @@ reqwest = "*"
 failure = "*"
 argparse = "*"
 
+[[bin]]
+bench = false
+path = "src/main.rs"
+name = "getquote-blocktap"
+
+[badges]
+travis-ci = { repository = "colindean/ledger-getquote-blocktap" }
