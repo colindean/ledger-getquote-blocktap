@@ -12,7 +12,8 @@ fn main() {
         None => {
             eprintln!(
                 "OUT_DIR environment variable not defined. \
-                 This should have been set by Cargo.");
+                 This should have been set by Cargo."
+            );
             process::exit(1);
         }
     };

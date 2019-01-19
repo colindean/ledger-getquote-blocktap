@@ -41,7 +41,6 @@ fn main() {
 
 use single_currency::SingleCurrencyMarkets;
 fn extract_price(response: Response<single_currency::ResponseData>) -> String {
-
     let markets: Vec<Option<SingleCurrencyMarkets>> = response
         .data
         .expect("No data")
@@ -52,12 +51,8 @@ fn extract_price(response: Response<single_currency::ResponseData>) -> String {
     let first: &Option<SingleCurrencyMarkets> = markets.first().expect("Markets is empty");
     let markets: &SingleCurrencyMarkets = first.as_ref().expect("sdf");
 
-    let ticker = markets
-        .ticker.as_ref()
-        .expect("No ticker");
-    let price = ticker
-        .last_price.as_ref()
-        .expect("No last_price");
+    let ticker = markets.ticker.as_ref().expect("No ticker");
+    let price = ticker.last_price.as_ref().expect("No last_price");
 
     price.to_string()
 }
