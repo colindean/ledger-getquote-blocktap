@@ -1,0 +1,15 @@
+language: rust
+env:
+  global:
+    - PROJECT_NAME: ledger-getquote-blocktap
+    - RUST_BACKTRACE: full
+matrix:
+  fast_finish: true
+  include:
+  - os: linux
+    rust: nightly
+    env: TARGET=x86_64-unknown-linux-musl
+  - os: osx
+    rust: nightly
+    env: TARGET=x86_64-apple-darwin
+cache: cargo
