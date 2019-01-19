@@ -1,0 +1,11 @@
+[package]
+name = "ledger-getquote-blocktap"
+version = "0.1.0"
+authors = ["Colin Dean <git@cad.cx>"]
+edition = "2018"
+
+[dependencies]
+serde = "*"
+serde_derive = "*"
+graphql_client = "0.6.0"
+
