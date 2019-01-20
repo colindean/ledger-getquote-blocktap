@@ -23,6 +23,8 @@ Homebrew is the preferred installation method:
     brew tap colindean/ledger-getquote-blocktap https://github.com/colindean/ledger-getquote-blocktap.git
     brew install ledger-getquote-blocktap-bin
 
+Alternatively, download the [latest release here](https://github.com/colindean/ledger-getquote-blocktap/releases/latest).
+
 ## The base GraphQL
 
 Run this in [Blocktap's playground](https://api.blocktap.io/graphiql):
