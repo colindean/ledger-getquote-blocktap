@@ -16,6 +16,13 @@ Example:
     $ getquote-blocktap BTC
     3680.000000000
 
+## Installation
+
+Homebrew is the preferred installation method:
+
+    brew tap colindean/ledger-getquote-blocktap https://github.com/colindean/ledger-getquote-blocktap.git
+    brew install ledger-getquote-blocktap-bin
+
 ## The base GraphQL
 
 Run this in [Blocktap's playground](https://api.blocktap.io/graphiql):
