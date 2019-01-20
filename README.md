@@ -25,6 +25,9 @@ Homebrew is the preferred installation method:
 
 Alternatively, download the [latest release here](https://github.com/colindean/ledger-getquote-blocktap/releases/latest).
 
+For Windows, you can use the MSVC version if you already have the 2015 Visual 
+C++ Runtime already installed. Otherwise, try the GNU version. 
+
 ## Communicating with Blocktap.io
 
 ### The base GraphQL
