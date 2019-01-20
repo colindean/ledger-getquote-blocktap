@@ -25,7 +25,9 @@ Homebrew is the preferred installation method:
 
 Alternatively, download the [latest release here](https://github.com/colindean/ledger-getquote-blocktap/releases/latest).
 
-## The base GraphQL
+## Communicating with Blocktap.io
+
+### The base GraphQL
 
 Run this in [Blocktap's playground](https://api.blocktap.io/graphiql):
 
@@ -42,7 +44,7 @@ query ledger_pricedb {
   }
 }
 ```
-## Retrieve Blocktap's JSON schema
+### Retrieve Blocktap's JSON schema
 
 Use the fantastic [graphql-rust project's client tool](https://github.com/graphql-rust/graphql-client):
 
