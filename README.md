@@ -1,5 +1,10 @@
 # ledger-getquote-blocktap
 
+![License: MIT](https://img.shields.io/github/license/colindean/ledger-getquote-blocktap.svg)
+[![Linux and macOS build Status](https://travis-ci.org/colindean/ledger-getquote-blocktap.svg?branch=master)](https://travis-ci.org/colindean/ledger-getquote-blocktap)
+[![Windows build status](https://ci.appveyor.com/api/projects/status/o6y1sq18anxv0oh4?svg=true)](https://ci.appveyor.com/project/colindean/ledger-getquote-blocktap)
+
+
 An implementation of [ledger-cli](https://ledger-cli.org) `getquote` that uses [Blocktap.io](https://blocktap.io) GraphQL to retrieve cryptocurrency pricing data.
 
 ## The base GraphQL
