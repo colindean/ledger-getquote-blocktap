@@ -7,6 +7,15 @@
 
 An implementation of [ledger-cli](https://ledger-cli.org) `getquote` that uses [Blocktap.io](https://blocktap.io) GraphQL to retrieve cryptocurrency pricing data.
 
+## Usage
+
+    getquote-blocktap <currency symbol>
+
+Example:
+
+    $ getquote-blocktap BTC
+    3680.000000000
+
 ## The base GraphQL
 
 Run this in [Blocktap's playground](https://api.blocktap.io/graphiql):
