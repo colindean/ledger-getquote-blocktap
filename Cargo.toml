@@ -30,4 +30,3 @@ name = "getquote-blocktap"
 
 [profile.release]
 opt-level = 'z'
-lto = true
