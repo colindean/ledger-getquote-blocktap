@@ -532,7 +532,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "ledger-getquote-blocktap"
-version = "0.0.8"
+version = "0.0.10-alpha.0"
 dependencies = [
  "argparse 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "cargo-release 0.11.0 (registry+https://github.com/rust-lang/crates.io-index)",

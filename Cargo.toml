@@ -1,6 +1,6 @@
 [package]
 name = "ledger-getquote-blocktap"
-version = "0.0.9"
+version = "0.0.10-alpha.0"
 description = "ledger-getquote-blocktap uses Blocktap.io to retrieve cryptocurrency spot pricing."
 readme = "README.md"
 keywords = ["cryptocurrency", "plaintextaccounting", "ledger", "blocktap", "graphql"]
