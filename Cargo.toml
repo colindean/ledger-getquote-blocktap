@@ -1,6 +1,6 @@
 [package]
 name = "ledger-getquote-blocktap"
-version = "0.1.0"
+version = "0.0.8"
 description = "ledger-getquote-blocktap uses Blocktap.io to retrieve cryptocurrency spot pricing."
 readme = "README.md"
 keywords = ["cryptocurrency", "plaintextaccounting", "ledger", "blocktap", "graphql"]
@@ -11,6 +11,7 @@ homepage = "https://github.com/colindean/ledger-getquote-blocktap"
 repository = "https://github.com/colindean/ledger-getquote-blocktap"
 build = "build.rs"
 edition = "2018"
+publish = false # prohibit publishing to crates.io
 
 [badges]
 travis-ci = { repository = "colindean/ledger-getquote-blocktap" }
@@ -22,6 +23,9 @@ graphql_client = "0.6.0"
 reqwest = "*"
 failure = "*"
 argparse = "*"
+
+[dev-dependencies]
+cargo-release = "*"
 
 [[bin]]
 bench = false
